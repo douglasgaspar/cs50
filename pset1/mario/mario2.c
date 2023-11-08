@@ -18,6 +18,11 @@ int main(void){
         for(imprime=0 ; imprime<linhas; imprime++){
             printf("#");
         }
+        printf(" ");
+        printf(" ");
+        for(imprime=0 ; imprime<linhas; imprime++){
+            printf("#");
+        }
         printf("\n");
     }
 }
