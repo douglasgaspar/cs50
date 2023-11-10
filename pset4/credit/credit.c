@@ -1,12 +1,11 @@
 #include <cs50.h>
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
 
 int main(void){
     char numCartao[16];
     printf("Informe o número do cartão: ");
-    scanf("%s", numCartao);
+    gets(numCartao);
 
     int qtdeDigitos = strlen(numCartao);
     while(qtdeDigitos < 13 || qtdeDigitos > 16){
