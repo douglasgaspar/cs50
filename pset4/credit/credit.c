@@ -20,8 +20,8 @@ int main(void){
 
     int somaDobro = 0;
     int somaInterna = 0;
-    for(int i=qtdeDigitos ; i>=0; i--){
-        somaInterna
+    for(int i=qtdeDigitos-2 ; i>=0; i=i-2){
+        somaInterna = atoi(numCartao[i]);
     }
 
 
