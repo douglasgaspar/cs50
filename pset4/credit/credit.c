@@ -14,6 +14,11 @@ int main(void){
         qtdeDigitos = strlen(numCartao);
     }
 
+    //34 37 Amex
+    //51, 52, 53, 54 ou 55 Master
+    //Visa inicia 4
+
+
     printf("%d", qtdeDigitos);
 
 }
