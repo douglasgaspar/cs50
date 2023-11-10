@@ -32,9 +32,9 @@ int main(void){
 
         for(int i=strlen(digitos) ; i>=0 ; i--){
             if(digitos[i] == '\0'){
-                printf("vazio ");
+                inicioPenultimo = i;
             }else{
-                printf("%c ", digitos[i]);
+                
             }
         }
     }
