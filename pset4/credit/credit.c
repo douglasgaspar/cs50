@@ -28,10 +28,14 @@ int main(void){
     }else{
         char digitos[17];
         sprintf(digitos, "%ld", numCartao);
+        int inicioPenultimo = 0;
 
         for(int i=strlen(digitos) ; i>=0 ; i--){
-
-            printf("%c ", digitos[i]);
+            if(digitos[i] == ''){
+                printf("vazio ");
+            }else{
+                printf("%c ", digitos[i]);
+            }
         }
     }
 
