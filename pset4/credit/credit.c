@@ -18,8 +18,10 @@ int main(void){
     //51, 52, 53, 54 ou 55 Master
     //Visa inicia 4
 
+    int somaDobro = 0;
+    int somaInterna = 0;
     for(int i=qtdeDigitos ; i>=0; i--){
-        
+        somaInterna
     }
 
 
