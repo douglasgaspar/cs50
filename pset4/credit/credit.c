@@ -22,17 +22,10 @@ int main(void){
     int somaDobro = 0;
     int cadaValor = 0;
     for(int i=qtdeDigitos-2 ; i>=0; i=i-2){
-        cadaValor = atoi(numCartao[i]);
-        if(cadaValor * 2 > 10){
-            char valor[] = itoa(cadavalor * 2);
-            int valor1 = atoi(valor[0]);
-            int valor2 = atoi(valor[1]);
-        }else{
-            somaDobro += cadaValor;
-        }
+        printf("%c ", cadaValor[i]);
     }
 
 
-    printf("%d", qtdeDigitos);
+    printf("\n%d", qtdeDigitos);
 
 }
