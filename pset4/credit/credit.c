@@ -19,7 +19,7 @@ int main(void){
     //Visa inicia 4
 
     for(int i=qtdeDigitos ; i>=0; i--){
-
+        
     }
 
 
