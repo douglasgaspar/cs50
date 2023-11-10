@@ -18,6 +18,10 @@ int main(void){
     //51, 52, 53, 54 ou 55 Master
     //Visa inicia 4
 
+    for(int i=0 ; i<qtdeDigitos; i++){
+        
+    }
+
 
     printf("%d", qtdeDigitos);
 
