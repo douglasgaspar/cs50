@@ -8,5 +8,10 @@ int main(void){
         troco = get_float("Qual o valor do troco?");
     }
 
+    int centavos = troco * 100;
+    int qtde1, qtde5, qtde10, qtde25;
+    
+
+
     printf("%f", troco);
 }
