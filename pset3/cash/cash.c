@@ -9,6 +9,7 @@ int main(void){
     }
 
     int centavos = troco * 100;
+    printf("Centavos %d", centavos);
     int qtdeMoedas = 0;
 
     while(centavos >= 25) {
