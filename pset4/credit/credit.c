@@ -21,6 +21,9 @@ int main(void){
         qtDigitos++;
     }
 
+    char str[20];
+    sprintf(str, "%ld", numCartao);
+
     //34 37 Amex
     //51, 52, 53, 54 ou 55 Master
     //Visa inicia 4
