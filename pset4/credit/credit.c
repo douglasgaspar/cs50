@@ -26,7 +26,7 @@ int main(void){
     if(qtDigitos < 13 || qtDigitos > 16){
         printf("INVALID");
     }else{
-        char digitos[20];
+        char digitos[17];
         sprintf(digitos, "%ld", numCartao);
         int inicioPenultimo = 0;
 
