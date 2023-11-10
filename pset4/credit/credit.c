@@ -8,7 +8,11 @@ int main(void){
     scanf("%s", numCartao);
 
     int qtdeDigitos = strlen(numCartao);
-    if(qtdeDigitos <)
+    while(qtdeDigitos < 13 || qtdeDigitos > 16){
+        printf("Valor inválido, informe novamente: ");
+        scanf("%s", numCartao);
+        qtdeDigitos = strlen(numCartao);
+    }
 
     printf("%d", qtdeDigitos);
 
