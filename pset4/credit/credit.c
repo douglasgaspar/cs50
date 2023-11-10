@@ -12,17 +12,11 @@ int main(void){
 
     int qtDigitos = 0;
     long copiaCartao = numCartao;
-    char digitos[17];
 
     while(copiaCartao > 0){
         int res = copiaCartao /= 10;
-        //digitos[qtDigitos] =
-        printf("%d \n", res);
         qtDigitos++;
     }
-
-    char str[20];
-    sprintf(str, "%ld", numCartao);
 
     //34 37 Amex
     //51, 52, 53, 54 ou 55 Master
@@ -31,7 +25,13 @@ int main(void){
     if(qtDigitos < 13 || qtDigitos > 16){
         printf("INVALID");
     }else{
+        char digitos[17];
+        sprintf(digitos, "%ld", numCartao);
 
+        for(int i=0 ; i<20 ; i++){
+            
+            printf("%c ", digitos[i]);
+        }
     }
 
 
