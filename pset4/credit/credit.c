@@ -1,29 +1,36 @@
-#include <cs50.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include<cs50.h>
+#include<stdio.h>
+#include<math.h>
 
 int main(void){
     long numCartao = 0;
 
     do{
         printf("Informe o número do cartão: ");
-        numCartao = get_long();
+        numCartao = get_long("");
     }while(numCartao <= 0);
 
     int qtDigitos = 0;
     long copiaCartao = numCartao;
+    char digitos[17];
 
     while(copiaCartao > 0){
-        copiaCartao /= 10;
+        int res = copiaCartao /= 10;
+        //digitos[qtDigitos] =
+        printf("%d \n", res);
         qtDigitos++;
     }
-
-    printf("%d ", qtDigitos);
 
     //34 37 Amex
     //51, 52, 53, 54 ou 55 Master
     //Visa inicia 4
 
-    printf("\n%d", qtdeDigitos);
+    if(qtDigitos < 13 || qtDigitos > 16){
+        printf("INVALID");
+    }else{
+
+    }
+
+
 
 }
