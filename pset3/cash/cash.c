@@ -9,9 +9,27 @@ int main(void){
     }
 
     int centavos = troco * 100;
-    int qtde1, qtde5, qtde10, qtde25;
-    
+    int qtdeMoedas = 0;
 
+    while(centavos >= 25) {
+        centavos -= 25;
+        qtdeMoedas++;
+    }
 
-    printf("%f", troco);
+    while(centavos >= 10) {
+        centavos -= 10;
+        qtdeMoedas++;
+    }
+
+    while(centavos >= 5) {
+        centavos -= 5;
+        qtdeMoedas++;
+    }
+
+     while(centavos >= 1) {
+        centavos -= 1;
+        qtdeMoedas++;
+    }
+
+    printf("%d\n", qtdeMoedas);
 }
