@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <math.h>
 
 int main(void){
     float troco = get_float("Qual o valor do troco?");
@@ -8,8 +9,7 @@ int main(void){
         troco = get_float("Qual o valor do troco?");
     }
 
-    int centavos = troco * 100;
-    printf("Centavos %d", centavos);
+    int centavos = round(troco * 100);
     int qtdeMoedas = 0;
 
     while(centavos >= 25) {
