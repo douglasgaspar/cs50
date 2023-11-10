@@ -1,6 +1,7 @@
 #include<cs50.h>
 #include<stdio.h>
 #include<math.h>
+#include <string.h>
 
 int main(void){
     long numCartao = 0;
@@ -28,8 +29,8 @@ int main(void){
         char digitos[17];
         sprintf(digitos, "%ld", numCartao);
 
-        for(int i=0 ; i<20 ; i++){
-            
+        for(int i=strlen(digitos) ; i>=0 ; i--){
+
             printf("%c ", digitos[i]);
         }
     }
