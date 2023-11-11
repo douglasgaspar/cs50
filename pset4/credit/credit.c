@@ -39,7 +39,8 @@ int main(void){
                 pulaDois++;
                 if(pulaDois % 2 == 0){
                     int dobro = digitos[i] * 10 + (digitos[i] - '0');
-                    printf(" %d ", (dobro));
+                    printf(" %d ", digitos[i]);
+                    //printf(" %d ", (dobro));
                 }
 
             }
