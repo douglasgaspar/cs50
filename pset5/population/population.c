@@ -27,7 +27,7 @@ int main(void)
     }
 
     //nascem n / 3 novas lhamas e n / 4 morrem
-    int numeroAnos = 0;
+    int numeroAnos = -1;
     int populacao = numeroInicial;
     while(populacao <= numeroFinal){
         int nascem = 0;
