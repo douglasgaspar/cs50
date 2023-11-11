@@ -61,7 +61,9 @@ int main(void){
             }
         }
         printf("Checksum: %d \n", somaDigitosDoisDois);
-        if(somaDigitosDoisDois)
+        if(somaDigitosDoisDois % 10 == 0){
+            
+        }
     }
 
 
