@@ -38,8 +38,8 @@ int main(void){
             }else{
                 pulaDois++;
                 if(pulaDois % 2 == 0){
-                    int dobro = atoi(digitos[i]);
-                    printf(" %d ", (dobro*2));
+                    int dobro = digitos[i] * 10 + (digitos[i] - '0');
+                    printf(" %d ", (dobro));
                 }
 
             }
