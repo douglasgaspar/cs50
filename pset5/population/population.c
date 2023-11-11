@@ -27,15 +27,18 @@ int main(void)
     }
 
     //nascem n / 3 novas lhamas e n / 4 morrem
-    int numeroAnos = 1;
+    int numeroAnos = 0;
     int populacao = numeroInicial;
     while(populacao <= numeroFinal){
         int nascem = 0;
         int morrem = 0;
         nascem = (int) populacao/3;
+        printf("\nNascem: %d", nascem);
         morrem = (int) populacao/4;
+        printf("\nMorrem: %d", morrem);
 
         populacao = populacao + nascem - morrem;
+        printf("\nPopulacao: %d", populacao);
         numeroAnos++;
     }
 
