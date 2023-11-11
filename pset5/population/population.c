@@ -5,22 +5,36 @@ int main(void)
 {
     int numeroInicial = 0;
     int numeroFinal = 0;
-    do
-    {
-        numeroInicial = get_int("Número inicial de lhamas: ");
-        printf("\n");
-    }while (numeroInicial < 9);
 
-    do
-    {
-        numeroFinal = get_int("Número final de lhamas: ");
-        printf("\n");
+    while(numeroFinal <= numeroInicial){
+        do
+        {
+            numeroInicial = get_int("Número inicial de lhamas: ");
+            printf("\n");
+            if(numeroInicial < 9){
+                printf("Número inválido, informe um valor maior ou igual a 9. \n");
+            }
+        }while (numeroInicial < 9);
+
+        do
+        {
+            numeroFinal = get_int("Número final de lhamas: ");
+            printf("\n");
+            if(numeroFinal < 9 || numeroFinal < numeroInicial){
+                printf("Número inválido, informe um valor maior que o inicial. \n");
+            }
+        }while (numeroFinal < numeroInicial);
     }
-    numeroInicial = get_int("Número final de lhamas: ");
-    while (numeroFinal < 9);
-      // TODO: Solicite o valor inicial ao usuário
 
-     // TODO: Solicite o valor final ao usuário
+    //nascem n / 3 novas lhamas e n / 4 morrem
+    int numeroAnos = 1;
+    while(numeroFinal >= n)
+
+
+
+
+
+
 
      // TODO: Calcule o número de anos até o limite
 
