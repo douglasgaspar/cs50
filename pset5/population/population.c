@@ -30,11 +30,14 @@ int main(void)
     int numeroAnos = 1;
     int populacao = numeroInicial;
     while(populacao <= numeroFinal){
-        populacao /= 4;
-        populacao
+        int nascem = (int)(populacao \ 3);
+        int morrem = (int)(populacao \ 4);
+        populacao = populacao + nascem - morrem;
+        numeroAnos++;
     }
 
-
+    printf("\nAnos: %d\n", numeroAnos);
+}
 
 
 
