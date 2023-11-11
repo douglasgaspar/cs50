@@ -24,7 +24,7 @@ int main(void){
     //Visa inicia 4
 
     if(qtDigitos < 13 || qtDigitos > 16){
-        printf("INVALID");
+        printf("\nINVALID\n");
     }else{
         char digitos[17];
         sprintf(digitos, "%ld", numCartao);
@@ -37,7 +37,8 @@ int main(void){
             }else{
                 pulaDois++;
                 if(pulaDois % 2 == 0){
-                    int dobro = 
+                    int dobro = (int)digitos[i];
+                    printf(" %d ", (dobro*2));
                 }
 
             }
