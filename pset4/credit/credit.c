@@ -63,9 +63,17 @@ int main(void){
             //34 37 Amex
             //51, 52, 53, 54 ou 55 Master
             //Visa inicia 4
-            if(digitos(0) == '3'){
-                printf("AMEX");
-            }else if(digitos(0) == '3')
+            if(digitos[0] == '3'){
+                printf("AMEX\n");
+            }else if(digitos[0] == '4'){
+                printf("VISA\n");
+            }else if(digitos[0] == '5'){
+                printf("MASTERCARD\n");
+            }else{
+                printf("INVALID\n");
+            }
+        }else{
+            printf("INVALID\n");
         }
     }
 
