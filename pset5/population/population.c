@@ -28,9 +28,9 @@ int main(void)
         printf("Years: 0");
     }else{
         //nascem n / 3 novas lhamas e n / 4 morrem
-        int numeroAnos = -1;
+        int numeroAnos = 0;
         int populacao = numeroInicial;
-        while(populacao <= numeroFinal){
+        while(populacao < numeroFinal){
             int nascem = 0;
             int morrem = 0;
             nascem = (int) populacao/3;
