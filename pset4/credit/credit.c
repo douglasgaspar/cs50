@@ -29,12 +29,17 @@ int main(void){
         char digitos[17];
         sprintf(digitos, "%ld", numCartao);
         int inicioPenultimo = 0;
+        int pulaDois = 0;
 
         for(int i=strlen(digitos) ; i>=0 ; i--){
             if(digitos[i] == '\0'){
                 inicioPenultimo = i;
             }else{
-                
+                pulaDois++;
+                if(pulaDois % 2 == 0){
+                    int 
+                }
+
             }
         }
     }
