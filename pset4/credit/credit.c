@@ -1,6 +1,7 @@
 #include<cs50.h>
 #include<stdio.h>
 #include<math.h>
+#include <stdlib.h>
 #include <string.h>
 
 int main(void){
@@ -37,7 +38,7 @@ int main(void){
             }else{
                 pulaDois++;
                 if(pulaDois % 2 == 0){
-                    int dobro = (int)digitos[i];
+                    int dobro = atoi(digitos[i]);
                     printf(" %d ", (dobro*2));
                 }
 
