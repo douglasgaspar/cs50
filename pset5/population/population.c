@@ -10,7 +10,6 @@ int main(void)
         do
         {
             numeroInicial = get_int("Número inicial de lhamas: ");
-            printf("\n");
             if(numeroInicial < 9){
                 printf("Número inválido, informe um valor maior ou igual a 9. \n");
             }
@@ -19,7 +18,6 @@ int main(void)
         do
         {
             numeroFinal = get_int("Número final de lhamas: ");
-            printf("\n");
             if(numeroFinal < 9 || numeroFinal < numeroInicial){
                 printf("Número inválido, informe um valor maior que o inicial. \n");
             }
@@ -42,5 +40,5 @@ int main(void)
         numeroAnos++;
     }
 
-    printf("Years: %d", numeroAnos);
+    printf("Years: %i", numeroAnos);
 }
