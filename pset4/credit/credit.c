@@ -61,7 +61,7 @@ int main(void){
             }
         }
         printf("Checksum: %d \n", somaDigitosDoisDois);
-
+        if(somaDigitosDoisDois)
     }
 
 
