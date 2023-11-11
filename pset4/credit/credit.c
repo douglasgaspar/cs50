@@ -70,9 +70,10 @@ int main(void){
                     printf("INVALID\n");
                 }
             }
-            }else if(digitos[0] == '4'){
+            if(digitos[0] == '4'){
                 printf("VISA\n");
-            }else if(digitos[0] == '5'){
+            }
+            if(digitos[0] == '5'){
                 if(digitos[1] == '1' || digitos[1] == '2' || digitos[1] == '3' || digitos[1] == '4' || digitos[1] == '5'){
                     printf("MASTERCARD\n");
                 }else{
@@ -81,11 +82,6 @@ int main(void){
             }else{
                 printf("INVALID\n");
             }
-        }else{
-            printf("INVALID\n");
         }
     }
-
-
-
 }
