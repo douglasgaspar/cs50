@@ -3,10 +3,10 @@
 
 int main(void)
 {
-    int numeroInicial = 0;
+    int numeroInicial = 1;
     int numeroFinal = 0;
 
-    while(numeroFinal <= numeroInicial){
+    while(numeroFinal < numeroInicial){
         do
         {
             numeroInicial = get_int("Número inicial de lhamas: ");
@@ -28,7 +28,7 @@ int main(void)
         printf("Years: 0");
     }else{
         //nascem n / 3 novas lhamas e n / 4 morrem
-        int numeroAnos = 0;
+        int numeroAnos = -1;
         int populacao = numeroInicial;
         while(populacao <= numeroFinal){
             int nascem = 0;
