@@ -31,7 +31,7 @@ int main(void){
         sprintf(digitos, "%ld", numCartao); //Converte long para char[]
         int pulaDois = 0;
         int somaMaiorDez = 0;
-        int somaDigitosDoisDois 
+        int somaDigitosDoisDois = 0;
 
         for(int i=strlen(digitos) ; i>=0 ; i--){
             if(digitos[i] == '\0'){
@@ -40,17 +40,28 @@ int main(void){
                 pulaDois++;
                 if(pulaDois % 2 == 0){
                     int dobro = digitos[i] - '0';
+                    dobro = dobro * 2;
 
                     if(dobro > 9){
+                        int resto = dobro % 10;
+                        int quociente = dobro / 10;
 
+                        somaDigitosDoisDois += (resto + quociente);
+                        //printf("Resto: %d ", resto);
+                        //printf("Quociente: %d ", quociente);
+                    }else{
+                        somaDigitosDoisDois += dobro;
                     }
-
-                    printf(" %d ", (dobro * 2));
-                    //printf(" %d ", (dobro));
+                    //printf(" %d ", dobro);
+                }else{
+                    //Soma os demais números do cartão
+                    int num = digitos[i] - '0';
+                    somaDigitosDoisDois += num;
                 }
-
             }
         }
+        printf("Checksum: %d \n", somaDigitosDoisDois);
+
     }
 
 
