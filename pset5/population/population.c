@@ -18,27 +18,31 @@ int main(void)
         do
         {
             numeroFinal = get_int("Número final de lhamas: ");
-            if(numeroFinal < 9 || numeroFinal <= numeroInicial){
+            if(numeroFinal < 9 || numeroFinal < numeroInicial){
                 printf("Número inválido, informe um valor maior que o inicial. \n");
             }
-        }while (numeroFinal <= numeroInicial);
+        }while (numeroFinal < numeroInicial);
     }
 
-    //nascem n / 3 novas lhamas e n / 4 morrem
-    int numeroAnos = 0;
-    int populacao = numeroInicial;
-    while(populacao <= numeroFinal){
-        int nascem = 0;
-        int morrem = 0;
-        nascem = (int) populacao/3;
-        //printf("\nNascem: %d", nascem);
-        morrem = (int) populacao/4;
-        //printf("\nMorrem: %d", morrem);
+    if(numeroFinal == numeroInicial){
+        printf("Years: 0");
+    }else{
+        //nascem n / 3 novas lhamas e n / 4 morrem
+        int numeroAnos = 0;
+        int populacao = numeroInicial;
+        while(populacao <= numeroFinal){
+            int nascem = 0;
+            int morrem = 0;
+            nascem = (int) populacao/3;
+            //printf("\nNascem: %d", nascem);
+            morrem = (int) populacao/4;
+            //printf("\nMorrem: %d", morrem);
 
-        populacao = populacao + nascem - morrem;
-        //printf("\nPopulacao: %d", populacao);
-        numeroAnos++;
+            populacao = populacao + nascem - morrem;
+            //printf("\nPopulacao: %d", populacao);
+            numeroAnos++;
+        }
+
+        printf("Years: %i", numeroAnos);
     }
-
-    printf("Years: %i", numeroAnos);
 }
