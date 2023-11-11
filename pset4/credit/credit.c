@@ -58,7 +58,7 @@ int main(void){
                 }
             }
         }
-        //printf("Checksum: %d \n", somaDigitosDoisDois);
+        printf("Checksum: %d \n", somaDigitosDoisDois);
         if(somaDigitosDoisDois % 10 == 0){
             //34 37 Amex
             //51, 52, 53, 54 ou 55 Master
