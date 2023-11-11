@@ -30,21 +30,14 @@ int main(void)
     int numeroAnos = 1;
     int populacao = numeroInicial;
     while(populacao <= numeroFinal){
-        int nascem = (int)(populacao \ 3);
-        int morrem = (int)(populacao \ 4);
+        int nascem = 0;
+        int morrem = 0;
+        nascem = (int) populacao/3;
+        morrem = (int) populacao/4;
+
         populacao = populacao + nascem - morrem;
         numeroAnos++;
     }
 
     printf("\nAnos: %d\n", numeroAnos);
-}
-
-
-
-
-
-     // TODO: Calcule o número de anos até o limite
-
-     // TODO: Imprima o número de anos
-
 }
