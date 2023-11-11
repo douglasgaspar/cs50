@@ -28,7 +28,11 @@ int main(void)
 
     //nascem n / 3 novas lhamas e n / 4 morrem
     int numeroAnos = 1;
-    while(numeroFinal >= n)
+    int populacao = numeroInicial;
+    while(populacao <= numeroFinal){
+        populacao /= 4;
+        populacao
+    }
 
 
 
