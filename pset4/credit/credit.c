@@ -37,7 +37,7 @@ int main(void){
             }else{
                 pulaDois++;
                 if(pulaDois % 2 == 0){
-                    int 
+                    int dobro = 
                 }
 
             }
