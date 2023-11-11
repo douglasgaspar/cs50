@@ -28,18 +28,24 @@ int main(void){
         printf("\nINVALID\n");
     }else{
         char digitos[17];
-        sprintf(digitos, "%ld", numCartao);
-        int inicioPenultimo = 0;
+        sprintf(digitos, "%ld", numCartao); //Converte long para char[]
         int pulaDois = 0;
+        int somaMaiorDez = 0;
+        int somaDigitosDoisDois 
 
         for(int i=strlen(digitos) ; i>=0 ; i--){
             if(digitos[i] == '\0'){
-                inicioPenultimo = i;
-            }else{
+
+            }else{ //Recueprar somente dígitos numéricos válidos
                 pulaDois++;
                 if(pulaDois % 2 == 0){
-                    int dobro = digitos[i] * 10 + (digitos[i] - '0');
-                    printf(" %d ", digitos[i]);
+                    int dobro = digitos[i] - '0';
+
+                    if(dobro > 9){
+
+                    }
+
+                    printf(" %d ", (dobro * 2));
                     //printf(" %d ", (dobro));
                 }
 
