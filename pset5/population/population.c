@@ -18,10 +18,10 @@ int main(void)
         do
         {
             numeroFinal = get_int("Número final de lhamas: ");
-            if(numeroFinal < 9 || numeroFinal < numeroInicial){
+            if(numeroFinal < 9 || numeroFinal <= numeroInicial){
                 printf("Número inválido, informe um valor maior que o inicial. \n");
             }
-        }while (numeroFinal < numeroInicial);
+        }while (numeroFinal <= numeroInicial);
     }
 
     //nascem n / 3 novas lhamas e n / 4 morrem
