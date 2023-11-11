@@ -20,9 +20,7 @@ int main(void){
         qtDigitos++;
     }
 
-    //34 37 Amex
-    //51, 52, 53, 54 ou 55 Master
-    //Visa inicia 4
+
 
     if(qtDigitos < 13 || qtDigitos > 16){
         printf("\nINVALID\n");
@@ -62,7 +60,12 @@ int main(void){
         }
         printf("Checksum: %d \n", somaDigitosDoisDois);
         if(somaDigitosDoisDois % 10 == 0){
-            
+            //34 37 Amex
+            //51, 52, 53, 54 ou 55 Master
+            //Visa inicia 4
+            if(digitos(0) == '3'){
+                printf("AMEX");
+            }else if(digitos(0) == '3')
         }
     }
 
