@@ -8,6 +8,7 @@ int main(void){
     char delimitadores[] = "!?.";
 
     char * frases = strtok(origem, delimitadores);
+    
 
     for (int i = 0 ; i < strlen(frase) ; i++){
         if (islower(s[i])){
