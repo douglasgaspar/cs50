@@ -40,6 +40,11 @@ int main(void){
     float L = ((float)qtdeLetras / (float)qtdePalavras) * 100;
     printf("\n%f", L);
 
+    int indice = 0.0588 * L - 0.296 * S - 15.8;
+    printf("\n%i", indice);
+
+    if(indice <)
+
     // for (int i = 0 ; i < strlen(frase) ; i++){
     //     if (islower(s[i])){
     //         printf("%c", toupper(s[i]));
