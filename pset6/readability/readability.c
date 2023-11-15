@@ -4,11 +4,13 @@
 
 int main(void){
     string origem = get_string("Text: ");
+    //número de letras, palavras e frases do texto
 
     char delimitadores[] = "!?.";
 
     char * frases = strtok(origem, delimitadores);
-    
+
+
 
     for (int i = 0 ; i < strlen(frase) ; i++){
         if (islower(s[i])){
