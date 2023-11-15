@@ -7,10 +7,22 @@ int main(void){
     //número de letras, palavras e frases do texto
 
     char delimitadores[] = "!?.";
+    int qtdeFrases = 0;
+
     char espaco[] = " ";
+    int qtdePalavras = 0;
 
     char * frases = strtok(origem, delimitadores);
+    while(frases != NULL){
+        qtdeFrases++;
+        frases = strtok(NULL, delimitadores);
+    }
+
     char * palavras = strtok(origem, espaco);
+    while(palavras != NULL){
+        qtdePalavras++;
+        palavras = strtok(NULL, espaco);
+    }
 
     //índice = 0,0588 * L - 0,296 * S - 15,8
     //L contar as letras e dividir pela quantidade de palavras. Multiplicar por 100
@@ -18,12 +30,11 @@ int main(void){
     //S quantidade de frases / quantidade de palavras. Multiplica por 100
     //S é o número médio de sentenças por 100 palavras no texto.
 
-    printf("\nFrases: %d", (int)strlen(frases));
-    printf("\nPalavras: %d", (int)strlen(palavras));
+    printf("\nFrases: %d", qtdeFrases);
+    printf("\nPalavras: %d", qtdePalavras);
 
-    float S = (strlen(frases) / strlen(palavras)) * 100;
+    float S = (qtdeFrases / qtdePalavras) * 100;
     printf("\n%f", S);
-
 
 
     // for (int i = 0 ; i < strlen(frase) ; i++){
