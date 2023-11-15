@@ -22,6 +22,7 @@ int main(void){
     }
 
     qtdePalavras++;
+    qtdeLetras = qtdeLetras - qtdePalavras - qtdeFrases;
 
     //índice = 0,0588 * L - 0,296 * S - 15,8
     //L contar as letras e dividir pela quantidade de palavras. Multiplicar por 100
