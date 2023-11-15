@@ -1,6 +1,7 @@
 #include<cs50.h>
 #include<stdio.h>
 #include<string.h>
+#include<math.h>
 
 int main(void){
     string origem = get_string("Text: ");
@@ -32,7 +33,7 @@ int main(void){
     printf("\nFrases: %d", qtdeFrases);
     printf("\nPalavras: %d", qtdePalavras);
 
-    float S = (qtdeFrases / qtdePalavras) * 100;
+    float S = floor(qtdeFrases / qtdePalavras) * 100;
     printf("\n%f", S);
 
 
