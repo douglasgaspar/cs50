@@ -9,6 +9,7 @@ int main(void){
     char delimitadores[] = "!?.";
 
     char * frases = strtok(origem, delimitadores);
+    char * palavras = strtok(origem, " ");
 
 
 
