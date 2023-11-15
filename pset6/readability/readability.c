@@ -33,7 +33,7 @@ int main(void){
     printf("\nFrases: %d", qtdeFrases);
     printf("\nPalavras: %d", qtdePalavras);
 
-    float S = floor(qtdeFrases / qtdePalavras) * 100;
+    float S = ((float)qtdeFrases / (float)qtdePalavras) * 100;
     printf("\n%f", S);
 
 
