@@ -5,6 +5,7 @@
 int main(void){
     string origem = get_string("Text: ");
     //número de letras, palavras e frases do texto
+    str
 
     char delimitadores[] = "!?.";
     int qtdeFrases = 0;
@@ -12,17 +13,20 @@ int main(void){
     char espaco[] = " ";
     int qtdePalavras = 0;
 
-    char * frases = strtok(origem, delimitadores);
+
+    char * palavras = strtok(origem, " ");
+    while(palavras != NULL){
+        printf("\n %s", palavras);
+        qtdePalavras++;
+        palavras = strtok(NULL, " ");
+    }
+
+    char * frases = strtok(copiaOrigem, delimitadores);
     while(frases != NULL){
         qtdeFrases++;
         frases = strtok(NULL, delimitadores);
     }
 
-    char * palavras = strtok(origem, " ");
-    while(palavras != NULL){
-        qtdePalavras++;
-        palavras = strtok(NULL, " ");
-    }
 
     //índice = 0,0588 * L - 0,296 * S - 15,8
     //L contar as letras e dividir pela quantidade de palavras. Multiplicar por 100
