@@ -7,9 +7,10 @@ int main(void){
     //número de letras, palavras e frases do texto
 
     char delimitadores[] = "!?.";
+    char espaco[] = " ";
 
     char * frases = strtok(origem, delimitadores);
-    char * palavras = strtok(origem, " ");
+    char * palavras = strtok(origem, espaco);
 
     //índice = 0,0588 * L - 0,296 * S - 15,8
     //L contar as letras e dividir pela quantidade de palavras. Multiplicar por 100
