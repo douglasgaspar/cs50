@@ -5,13 +5,16 @@
 int main(void){
     string origem = get_string("Text: ");
     //número de letras, palavras e frases do texto
-    str
 
     char delimitadores[] = "!?.";
     int qtdeFrases = 0;
 
     char espaco[] = " ";
     int qtdePalavras = 0;
+
+    for(int i=0 ; i<strlen(origem) ; i++){
+
+    }
 
 
     char * palavras = strtok(origem, " ");
@@ -21,7 +24,7 @@ int main(void){
         palavras = strtok(NULL, " ");
     }
 
-    char * frases = strtok(copiaOrigem, delimitadores);
+    char * frases = strtok(copia, delimitadores);
     while(frases != NULL){
         qtdeFrases++;
         frases = strtok(NULL, delimitadores);
