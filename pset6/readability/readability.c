@@ -12,6 +12,7 @@ int main(void){
     char * palavras = strtok(origem, " ");
 
     //índice = 0,0588 * L - 0,296 * S - 15,8
+    //L contar as letras e dividir pela quantidade de palavras. Multiplicar por 100
     //L é o número médio de letras por 100 palavras
     //S é o número médio de sentenças por 100 palavras no texto.
 
