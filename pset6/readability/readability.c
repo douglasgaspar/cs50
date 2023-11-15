@@ -30,28 +30,24 @@ int main(void){
     //S quantidade de frases / quantidade de palavras. Multiplica por 100
     //S é o número médio de sentenças por 100 palavras no texto.
 
-    printf("\nFrases: %d", qtdeFrases);
-    printf("\nPalavras: %d", qtdePalavras);
-    printf("\nLetras: %d", qtdeLetras);
+    // printf("\nFrases: %d", qtdeFrases);
+    // printf("\nPalavras: %d", qtdePalavras);
+    // printf("\nLetras: %d", qtdeLetras);
 
     float S = ((float)qtdeFrases / (float)qtdePalavras) * 100;
-    printf("\n%f", S);
+    //printf("\n%f", S);
 
     float L = ((float)qtdeLetras / (float)qtdePalavras) * 100;
-    printf("\n%f", L);
+    //printf("\n%f", L);
 
     int indice = 0.0588 * L - 0.296 * S - 15.8;
-    printf("\n%i", indice);
+    //printf("\n%i", indice);
 
-    if(indice <)
-
-    // for (int i = 0 ; i < strlen(frase) ; i++){
-    //     if (islower(s[i])){
-    //         printf("%c", toupper(s[i]));
-    //     }else{
-    //         printf("%c", s[i]);
-    //     }
-    // }
-    printf("\n");
-
+    if(indice < 1){
+        printf("Before Grade 1");
+    }else if(indice > 16){
+        printf("Grade 16+");
+    }else{
+        printf("Grade %i\n", indice);
+    }
 }
