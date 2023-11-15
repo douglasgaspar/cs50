@@ -7,11 +7,9 @@ int main(void){
     string origem = get_string("Text: ");
     //número de letras, palavras e frases do texto
 
-    char delimitadores[] = "!?.";
     int qtdeFrases = 0;
-
-    char espaco[] = " ";
     int qtdePalavras = 0;
+    int qtdeLetras = 0;
 
     for(int i=0 ; i<strlen(origem) ; i++){
         if(origem[i] == '!' || origem[i] == '?' || origem[i] == '.'){
@@ -20,6 +18,7 @@ int main(void){
         if(origem[i] == ' '){
             qtdePalavras++;
         }
+        qtdeLetras++;
     }
 
     qtdePalavras++;
@@ -32,10 +31,13 @@ int main(void){
 
     printf("\nFrases: %d", qtdeFrases);
     printf("\nPalavras: %d", qtdePalavras);
+    printf("\nLetras: %d", qtdeLetras);
 
     float S = ((float)qtdeFrases / (float)qtdePalavras) * 100;
     printf("\n%f", S);
 
+    float L = ((float)qtdeLetras / (float)qtdePalavras) * 100;
+    printf("\n%f", L);
 
     // for (int i = 0 ; i < strlen(frase) ; i++){
     //     if (islower(s[i])){
