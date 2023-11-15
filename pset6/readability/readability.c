@@ -13,23 +13,15 @@ int main(void){
     int qtdePalavras = 0;
 
     for(int i=0 ; i<strlen(origem) ; i++){
-
+        if(origem[i] == '!' || origem[i] == '?' || origem[i] == '.'){
+            qtdeFrases++;
+        }
+        if(origem[i] == ' '){
+            qtdePalavras++;
+        }
     }
 
-
-    char * palavras = strtok(origem, " ");
-    while(palavras != NULL){
-        printf("\n %s", palavras);
-        qtdePalavras++;
-        palavras = strtok(NULL, " ");
-    }
-
-    char * frases = strtok(copia, delimitadores);
-    while(frases != NULL){
-        qtdeFrases++;
-        frases = strtok(NULL, delimitadores);
-    }
-
+    qtdePalavras++;
 
     //índice = 0,0588 * L - 0,296 * S - 15,8
     //L contar as letras e dividir pela quantidade de palavras. Multiplicar por 100
