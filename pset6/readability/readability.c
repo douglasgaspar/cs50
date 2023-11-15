@@ -17,8 +17,11 @@ int main(void){
     //S quantidade de frases / quantidade de palavras. Multiplica por 100
     //S é o número médio de sentenças por 100 palavras no texto.
 
+    printf("\nFrases: %d", (int)strlen(frases));
+    printf("\nPalavras: %d", (int)strlen(palavras));
+
     float S = (strlen(frases) / strlen(palavras)) * 100;
-    printf("%f", S);
+    printf("\n%f", S);
 
 
 
