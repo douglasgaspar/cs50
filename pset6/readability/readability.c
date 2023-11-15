@@ -11,6 +11,10 @@ int main(void){
     char * frases = strtok(origem, delimitadores);
     char * palavras = strtok(origem, " ");
 
+    //índice = 0,0588 * L - 0,296 * S - 15,8
+    //L é o número médio de letras por 100 palavras
+    //S é o número médio de sentenças por 100 palavras no texto.
+
 
 
     for (int i = 0 ; i < strlen(frase) ; i++){
