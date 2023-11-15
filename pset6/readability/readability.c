@@ -9,7 +9,7 @@ int main(void){
     char delimitadores[] = "!?.";
     int qtdeFrases = 0;
 
-    char espaco[] = " ";
+    char espaco[] = "\0";
     int qtdePalavras = 0;
 
     char * frases = strtok(origem, delimitadores);
