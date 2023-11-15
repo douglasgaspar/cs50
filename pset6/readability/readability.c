@@ -9,7 +9,7 @@ int main(void){
     char delimitadores[] = "!?.";
     int qtdeFrases = 0;
 
-    char espaco[] = "\0";
+    char espaco[] = " ";
     int qtdePalavras = 0;
 
     char * frases = strtok(origem, delimitadores);
@@ -18,10 +18,10 @@ int main(void){
         frases = strtok(NULL, delimitadores);
     }
 
-    char * palavras = strtok(origem, espaco);
+    char * palavras = strtok(origem, " ");
     while(palavras != NULL){
         qtdePalavras++;
-        palavras = strtok(NULL, espaco);
+        palavras = strtok(NULL, " ");
     }
 
     //índice = 0,0588 * L - 0,296 * S - 15,8
