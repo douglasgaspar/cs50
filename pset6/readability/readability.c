@@ -18,7 +18,9 @@ int main(void){
         if(origem[i] == ' '){
             qtdePalavras++;
         }
-        qtdeLetras++;
+        if(origem[i] != ',' || origem[i] != '\'' || origem[i] != ':' || origem[i] != ';'){
+            qtdeLetras++;
+        }
     }
 
     qtdePalavras++;
@@ -30,9 +32,9 @@ int main(void){
     //S quantidade de frases / quantidade de palavras. Multiplica por 100
     //S é o número médio de sentenças por 100 palavras no texto.
 
-    // printf("\nFrases: %d", qtdeFrases);
-    // printf("\nPalavras: %d", qtdePalavras);
-    // printf("\nLetras: %d", qtdeLetras);
+    printf("\nFrases: %d", qtdeFrases);
+    printf("\nPalavras: %d", qtdePalavras);
+    printf("\nLetras: %d", qtdeLetras);
 
     float S = ((float)qtdeFrases / (float)qtdePalavras) * 100;
     //printf("\n%f", S);
