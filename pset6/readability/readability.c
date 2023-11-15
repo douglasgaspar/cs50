@@ -12,14 +12,16 @@ int main(void){
     int qtdeLetras = 0;
 
     for(int i=0 ; i<strlen(origem) ; i++){
+        qtdeLetras++;
+
         if(origem[i] == '!' || origem[i] == '?' || origem[i] == '.'){
             qtdeFrases++;
         }
         if(origem[i] == ' '){
             qtdePalavras++;
         }
-        if(origem[i] != ',' || origem[i] != '\'' || origem[i] != ':' || origem[i] != ';'){
-            qtdeLetras++;
+        if(origem[i] == ',' || origem[i] == '\'' || origem[i] == ':' || origem[i] == ';'){
+            qtdeLetras--;
         }
     }
 
@@ -37,19 +39,19 @@ int main(void){
     printf("\nLetras: %d\n", qtdeLetras);
 
     float S = ((float)qtdeFrases / (float)qtdePalavras) * 100;
-    //printf("\n%f", S);
+    printf("\n%f", S);
 
     float L = ((float)qtdeLetras / (float)qtdePalavras) * 100;
-    //printf("\n%f", L);
+    printf("\n%f", L);
 
-    int indice = 0.0588 * L - 0.296 * S - 15.8;
-    //printf("\n%i", indice);
+    float indice = 0.0588 * L - 0.296 * S - 15.8;
+    printf("\n%f", indice);
 
     if(indice < 1){
         printf("Before Grade 1\n");
     }else if(indice > 16){
         printf("Grade 16+\n");
     }else{
-        printf("Grade %i\n", indice);
+        printf("Grade %f\n", indice);
     }
 }
