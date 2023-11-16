@@ -46,7 +46,7 @@ int main(void){
     float L = ((float)qtdeLetras / (float)qtdePalavras) * 100;
     //printf("\n%f", L);
 
-    float indice = 0.0588 * L - 0.296 * S - 15.8;
+    in indice = 0.0588 * L - 0.296 * S - 15.8;
     //printf("\n%i", ceil(indice));
 
     if(indice < 1){
