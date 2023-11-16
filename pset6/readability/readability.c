@@ -1,3 +1,12 @@
+/*
+Projete e implemente um programa, readability, que calcule o índice Coleman-Liau do texto.
+
+Implemente seu programa em um arquivo denominado readability.c em um diretório denominado readability.
+Seu programa deve solicitar ao usuário uma string de texto (usando get_string ).
+Seu programa deve contar o número de letras, palavras e frases do texto. Você pode assumir que uma letra é qualquer caractere minúsculo de a a z ou qualquer caractere maiúsculo de A a Z , qualquer sequência de caracteres separados por espaços deve contar como uma palavra e que qualquer ocorrência de um ponto final, ponto de exclamação ou ponto de interrogação indica o final de uma frase.
+Seu programa deve imprimir como saída "Grade X", onde X é o nível de grau calculado pela fórmula de Coleman-Liau, arredondado para o número inteiro mais próximo.
+Se o número do índice resultante for 16 ou superior (equivalente ou superior ao nível de leitura de graduação sênior), seu programa deve produzir "Grade 16+" em vez de fornecer o número do índice exato. Se o número do índice for menor que 1, seu programa deve imprimir "Before Grade 1" .
+*/
 #include<cs50.h>
 #include<stdio.h>
 #include<string.h>
@@ -46,14 +55,16 @@ int main(void){
     float L = ((float)qtdeLetras / (float)qtdePalavras) * 100;
     //printf("\n%f", L);
 
-    in indice = 0.0588 * L - 0.296 * S - 15.8;
+    float indice = 0.0588 * L - 0.296 * S - 15.8;
     //printf("\n%i", ceil(indice));
 
-    if(indice < 1){
+    int indiceInt = round(indice);
+
+    if(indiceInt < 1){
         printf("Before Grade 1\n");
-    }else if(indice > 16){
+    }else if(indiceInt > 16){
         printf("Grade 16+\n");
     }else{
-        printf("Grade %.0f\n", ceil(indice));
+        printf("Grade %i\n", indiceInt);
     }
 }
