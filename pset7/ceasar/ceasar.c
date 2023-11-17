@@ -11,10 +11,10 @@ int main(int argc, string argv[]){
         char char1 = argv[1][0];
         printf("%c", char1);
 
-        int chave = atoi(argv[1]);
-        //printf("%i", chave);
         if(isdigit(char1) == 1){ //Verificar se é número
             string textoOriginal = get_string("plaintext: ");
+            int chave = atoi(argv[1]);
+            printf("%i", chave);
 
             printf("ciphertext: ");
 
