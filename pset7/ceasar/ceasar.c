@@ -23,8 +23,8 @@ int main(int argc, string argv[]){
                 strchr(argb[1], '3') != NULL && strchr(argb[1], '4') != NULL && strchr(argb[1], '5') != NULL &&
                     strchr(argb[1], '6') != NULL && strchr(argb[1], '7') != NULL && strchr(argb[1], '8') != NULL &&
                         strchr(argb[1], '9') != NULL){
+            if()
 
-                
 
             }else{
                 printf("A chave não deve possuir números");
@@ -35,7 +35,7 @@ int main(int argc, string argv[]){
             return 1;
         }
     }else{
-        printf("Error");
+        printf("Quantidade incorreta de argumentos");
         return 1;
     }
 }
