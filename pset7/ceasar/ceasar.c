@@ -31,8 +31,9 @@ int main(int argc, string argv[]){
 
                     for(int j = i+1; j < strlen(chave); j++) {
                         if(chave[i] == chave[j] && chave[i] != ' ') {
-                        count++;
-                        chave[j] = '0';
+                            count++;
+                            chave[j] = '0';
+                        }
                     }
                 }
 
