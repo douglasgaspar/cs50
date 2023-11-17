@@ -10,9 +10,23 @@ int main(int argc, string argv[]){
     if (argc == 2){ //Testa se tem o segundo argumento
         if(isdigit(argv[1]) == 1){ //Verificar se é número
             int chave = atoi(argv[1]);
-            string texto = get_string("plaintext: ");
-            
+            string textoOriginal = get_string("plaintext: ");
 
+            printf("ciphertext: ");
+
+            for(int i=0 ; i<strlen(textoOriginal) ; i++){
+                int posicaoAscii = (int)tolower(textoOriginal[i]) - 97;
+                //printf(">%i ", posicaoAscii);
+                if(posicaoAscii >= 0 && posicaoAscii <= 26){
+                    if(islower(textoOriginal[i])){
+                        printf("%c", tolower(chave[posicaoAscii + chave]));
+                    }else{
+                        printf("%c", toupper(chave[posicaoAscii + chave]));
+                    }
+                }else{
+                    printf("%c", textoOriginal[i]);
+                }
+            }
         }else{
             printf("Usage: ./caesar key");
             return 1;
