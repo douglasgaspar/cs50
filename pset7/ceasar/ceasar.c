@@ -8,9 +8,12 @@ int main(int argc, string argv[]){
     //Primeiro argumento é o nome do executável
     //Segundo argumento é o parâmetro que precisa ser passado
     if (argc == 2){ //Testa se tem o segundo argumento
+        char char1 = argv[1][0];
+        printf("%c", char1);
+
         int chave = atoi(argv[1]);
-        printf("%i", chave);
-        if(chave < 100){ //Verificar se é número
+        //printf("%i", chave);
+        if(isdigit(char1) == 1){ //Verificar se é número
             string textoOriginal = get_string("plaintext: ");
 
             printf("ciphertext: ");
