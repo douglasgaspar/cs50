@@ -27,23 +27,21 @@ int main(int argc, string argv[]){
                 string chave = argv[1];
                 int count = 0;
                 for(int i = 0; i < strlen(chave); i++) {
-                count = 1;
+                    count = 1;
 
-                for(int j = i+1; j < strlen(chave); j++) {
-                    if(string[i] == string[j] && string[i] != ' ') {
-                    count++;
-                //Set string[j] to 0 to avoid printing visited character
-                string[j] = '0';
-                }
-                }
-
-                //A character is considered as duplicate if count is greater than 1
-
-                if(count > 1 && string[i] != '0')
-                printf("%c\n", string[i]);
+                    for(int j = i+1; j < strlen(chave); j++) {
+                        if(chave[i] == chave[j] && chave[i] != ' ') {
+                        count++;
+                        chave[j] = '0';
+                    }
                 }
 
-                printf("OK");
+                if(count > 1 && chave[i] != '0'){
+                    printf("Valores duplicados na chave");
+                    return 1;
+                }else{
+                    printf("OK");
+                }
             }else{
                 printf("A chave não deve possuir números");
                 return 1;
