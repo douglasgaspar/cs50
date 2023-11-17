@@ -30,6 +30,7 @@ int main(int argc, string argv[]){
                 }else{
                     printf("%c", textoOriginal[i]);
                 }
+                printf("\n");
             }
         }else{
             printf("Usage: ./caesar key numero");
