@@ -46,8 +46,8 @@ int main(int argc, string argv[]){
                     }
                 }
                 //Passou em todas as validações
+                //printf("OK");
                 
-                printf("OK");
 
             }else{
                 printf("A chave não deve possuir números");
