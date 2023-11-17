@@ -54,8 +54,8 @@ int main(int argc, string argv[]){
 
                 for(int i=0 ; i<strlen(textoOriginal) ; i++){
                     int posicaoAscii = (int)tolower(textoOriginal[i]) - 97;
-                    printf(">%i ", posicaoAscii);
-                    if(posicaoAscii >= 65 && posicaoAscii <= 122){
+                    //printf(">%i ", posicaoAscii);
+                    if(posicaoAscii >= 0 && posicaoAscii <= 26){
                         if(islower(textoOriginal[i])){
                             printf("%c", tolower(chave[posicaoAscii]));
                         }else{
