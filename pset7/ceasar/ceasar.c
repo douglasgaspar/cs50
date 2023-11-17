@@ -12,3 +12,12 @@ Seu programa deve preservar as letras maiúsculas e minúsculas: as letras maiú
 Após a saída do texto cifrado, você deve imprimir uma nova linha. Seu programa deve então sair retornando 0 de main.
 */
 
+#include <cs50.h>
+#include <stdio.h>
+
+int main(int argc, string argv[]){
+    if (argc == 2){
+        
+    }
+
+}
