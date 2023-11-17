@@ -17,6 +17,8 @@ Após a saída do texto cifrado, você deve imprimir uma nova linha. Seu program
 
 int main(int argc, string argv[]){
     if (argc == 2){
+
+    }else{
         
     }
 
