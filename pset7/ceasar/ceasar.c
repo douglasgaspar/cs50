@@ -25,13 +25,22 @@ int main(int argc, string argv[]){
                         strchr(argv[1], '9') == NULL){
 
                 string chave = argv[1];
-                for(int i=0 ; i<strlen(argv[1]); i++){
-                    printf(">>> %c\n", chave[i]);
-                    if(strchr(argv[1], chave[i]) != NULL){
-                        printf("Caractere duplicado na chave");
-                        break;
-                        return 1;
-                    }
+                int count = 0;
+                for(int i = 0; i < strlen(chave); i++) {
+                count = 1;
+
+                for(int j = i+1; j < strlen(chave); j++) {
+                    if(string[i] == string[j] && string[i] != ' ') {
+                    count++;
+                //Set string[j] to 0 to avoid printing visited character
+                string[j] = '0';
+                }
+                }
+
+                //A character is considered as duplicate if count is greater than 1
+
+                if(count > 1 && string[i] != '0')
+                printf("%c\n", string[i]);
                 }
 
                 printf("OK");
