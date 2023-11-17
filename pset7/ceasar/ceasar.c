@@ -55,8 +55,8 @@ int main(int argc, string argv[]){
                 for(int i=0 ; i<strlen(textoOriginal) ; i++){
                     int posicaoAscii = (int)tolower(textoOriginal[i]) - 97;
                     int maiuscula = 0;
-                    if(posicaoAscii >= 65 && posicaoAscii <= 90){
-
+                    if(textoOriginal[i] >= 65 && textoOriginal[i] <= 90){
+                        printf("%c", toupper(chave[posicaoAscii]));
                     }
                     printf(">%i ", posicaoAscii);
                     if(posicaoAscii >= 65 && posicaoAscii <= 122){
