@@ -27,6 +27,7 @@ int main(int argc, string argv[]){
                     strchr(argv[1], '6') == NULL && strchr(argv[1], '7') == NULL && strchr(argv[1], '8') == NULL &&
                         strchr(argv[1], '9') == NULL){
 
+                //Converte para string para procurar valores repetidos
                 string chave = argv[1];
                 int count = 0;
                 for(int i = 0; i < strlen(chave); i++) {
@@ -44,6 +45,8 @@ int main(int argc, string argv[]){
                         return 1;
                     }
                 }
+                //Passou em todas as validações
+                
                 printf("OK");
 
             }else{
