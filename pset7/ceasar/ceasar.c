@@ -53,8 +53,7 @@ int main(int argc, string argv[]){
 
                 for(int i=0 ; i<strlen(chave) ; i++){
                     int posicaoAscii = (int)tolower(chave[i]) - 97;
-                    printf(")
-
+                    printf(">> %i", posicaoAscii);
                 }
 
 
