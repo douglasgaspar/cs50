@@ -53,8 +53,8 @@ int main(int argc, string argv[]){
                 printf("ciphertext: ");
 
                 for(int i=0 ; i<strlen(textoOriginal) ; i++){
-                    int posicaoAscii = (int)tolower(textoOriginal[i]) - 97;
-                    if(posicaoAscii >= 0 && posicaoAscii <= 25){
+                    int posicaoAscii = (int)textoOriginal[i];
+                    if(posicaoAscii >= 65 && posicaoAscii <= 122){
                         printf("%c", chave[posicaoAscii]);
                     }else{
                         printf("%c", textoOriginal[i]);
