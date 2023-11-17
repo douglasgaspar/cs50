@@ -24,6 +24,8 @@ int main(int argc, string argv[]){
                     strchr(argb[1], '6') != NULL && strchr(argb[1], '7') != NULL && strchr(argb[1], '8') != NULL &&
                         strchr(argb[1], '9') != NULL){
 
+                
+
             }else{
                 printf("A chave não deve possuir números");
                 return 1;
