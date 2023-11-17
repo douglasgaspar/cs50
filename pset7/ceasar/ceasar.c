@@ -47,7 +47,13 @@ int main(int argc, string argv[]){
                 }
                 //Passou em todas as validações
                 //printf("OK");
-                
+
+                string textoOriginal = get_string("Informe o texto limpo: ");
+
+                for(int i=0 ; i<strlen(chave) ; i++){
+                    int posicaoAscii = 
+                }
+
 
             }else{
                 printf("A chave não deve possuir números");
