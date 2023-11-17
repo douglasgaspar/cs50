@@ -18,12 +18,13 @@ Após a saída do texto cifrado, você deve imprimir uma nova linha. Seu program
 
 int main(int argc, string argv[]){
     if (argc == 2){
-        if(strlen(argb[1]) == 26){
-            if(strchr(argb[1], '0') != NULL && strchr(argb[1], '1') != NULL && strchr(argb[1], '2') != NULL &&
-                strchr(argb[1], '3') != NULL && strchr(argb[1], '4') != NULL && strchr(argb[1], '5') != NULL &&
-                    strchr(argb[1], '6') != NULL && strchr(argb[1], '7') != NULL && strchr(argb[1], '8') != NULL &&
-                        strchr(argb[1], '9') != NULL){
-            if()
+        if(strlen(argv[1]) == 26){
+            if(strchr(argv[1], '0') != NULL && strchr(argv[1], '1') != NULL && strchr(argv[1], '2') != NULL &&
+                strchr(argv[1], '3') != NULL && strchr(argv[1], '4') != NULL && strchr(argv[1], '5') != NULL &&
+                    strchr(argv[1], '6') != NULL && strchr(argv[1], '7') != NULL && strchr(argv[1], '8') != NULL &&
+                        strchr(argv[1], '9') != NULL){
+            
+            for(int i=0 ; i<strlen(argv[1]))
 
 
             }else{
