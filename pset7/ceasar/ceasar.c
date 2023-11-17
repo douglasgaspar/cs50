@@ -54,13 +54,13 @@ int main(int argc, string argv[]){
 
                 for(int i=0 ; i<strlen(textoOriginal) ; i++){
                     int posicaoAscii = (int)tolower(textoOriginal[i]) - 97;
-                    int maiuscula = 0;
-                    if(textoOriginal[i] >= 65 && textoOriginal[i] <= 90){
-                        printf("%c", toupper(chave[posicaoAscii]));
-                    }
                     printf(">%i ", posicaoAscii);
                     if(posicaoAscii >= 65 && posicaoAscii <= 122){
-                        printf("%c", chave[posicaoAscii]);
+                        if(islower(textoOriginal[i])){
+                            printf("%c", tolower(chave[posicaoAscii]));
+                        }else{
+                            printf("%c", toupper(chave[posicaoAscii]));
+                        }
                     }else{
                         printf("%c", textoOriginal[i]);
                     }
