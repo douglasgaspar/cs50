@@ -52,8 +52,12 @@ int main(int argc, string argv[]){
                 string textoOriginal = get_string("Informe o texto limpo: ");
 
                 for(int i=0 ; i<strlen(textoOriginal) ; i++){
-                    int posicaoAscii = (int)tolower(textoOriginal[i]) - 97;
-                    printf(">> %i\n", posicaoAscii);
+                    int posicaoAscii = (int)tolower(textoOriginal[i]) - 96;
+                    if(posicaoAscii >= 1 && posicaoAscii <= 26){
+                        printf(">> %c\n", posicaoAscii);
+                    }else{
+                        printf(">> .\n");
+                    }
                 }
 
 
