@@ -17,7 +17,7 @@ Após a saída do texto cifrado, você deve imprimir uma nova linha. Seu program
 #include <string.h>
 
 int main(int argc, string argv[]){
-    if (argc == 2){
+    if (argc == 2){ //Testa se tem argumento
         if(strlen(argv[1]) == 26){
             if(strchr(argv[1], '0') == NULL && strchr(argv[1], '1') == NULL && strchr(argv[1], '2') == NULL &&
                 strchr(argv[1], '3') == NULL && strchr(argv[1], '4') == NULL && strchr(argv[1], '5') == NULL &&
@@ -35,14 +35,14 @@ int main(int argc, string argv[]){
                             chave[j] = '0';
                         }
                     }
-                }
 
-                if(count > 1 && chave[i] != '0'){
-                    printf("Valores duplicados na chave");
-                    return 1;
-                }else{
-                    printf("OK");
+                    if(count > 1 && chave[i] != '0'){
+                        printf("Valores duplicados na chave");
+                        return 1;
+                    }
                 }
+                printf("OK");
+
             }else{
                 printf("A chave não deve possuir números");
                 return 1;
