@@ -23,10 +23,9 @@ int main(int argc, string argv[]){
                 strchr(argv[1], '3') != NULL && strchr(argv[1], '4') != NULL && strchr(argv[1], '5') != NULL &&
                     strchr(argv[1], '6') != NULL && strchr(argv[1], '7') != NULL && strchr(argv[1], '8') != NULL &&
                         strchr(argv[1], '9') != NULL){
-            
-            for(int i=0 ; i<strlen(argv[1]))
-
-
+                for(int i=0 ; i<strlen(argv[1]); i++){
+                    
+                }
             }else{
                 printf("A chave não deve possuir números");
                 return 1;
