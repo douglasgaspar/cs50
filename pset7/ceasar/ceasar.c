@@ -50,17 +50,17 @@ int main(int argc, string argv[]){
                 //printf("OK");
 
                 string textoOriginal = get_string("Informe o texto limpo: ");
+                printf("ciphertext: ");
 
                 for(int i=0 ; i<strlen(textoOriginal) ; i++){
                     int posicaoAscii = (int)tolower(textoOriginal[i]) - 97;
                     if(posicaoAscii >= 0 && posicaoAscii <= 25){
-                        printf(">> %c\n", chave[posicaoAscii]);
+                        printf("%c\n", chave[posicaoAscii]);
                     }else{
-                        printf(">> .\n");
+                        printf("%c", textoOriginal[i]);
                     }
                 }
-
-
+                printf("\n");
             }else{
                 printf("A chave não deve possuir números");
                 return 1;
