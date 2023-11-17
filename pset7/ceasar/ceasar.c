@@ -19,6 +19,7 @@ Após a saída do texto cifrado, você deve imprimir uma nova linha. Seu program
 int main(int argc, string argv[]){
     if (argc == 2){
         if(strlen(argb[1]) == 26){
+            if()
 
         }else{
             printf("A chave deve ter 26 caracteres");
