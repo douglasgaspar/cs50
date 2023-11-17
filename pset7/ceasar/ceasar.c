@@ -32,10 +32,8 @@ int main(int argc, string argv[]){
             printf("A chave deve ter 26 caracteres");
             return 1;
         }
-
     }else{
         printf("Error");
         return 1;
     }
-
 }
