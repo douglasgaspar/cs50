@@ -15,6 +15,7 @@ Após a saída do texto cifrado, você deve imprimir uma nova linha. Seu program
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(int argc, string argv[]){
     //Primeiro argumento é o nome do executável
@@ -51,8 +52,8 @@ int main(int argc, string argv[]){
                 string textoOriginal = get_string("Informe o texto limpo: ");
 
                 for(int i=0 ; i<strlen(chave) ; i++){
-                    int posicaoAscii = (int)chave[i];
-                    
+                    int posicaoAscii = (int)tolower(chave[i]);
+
                 }
 
 
