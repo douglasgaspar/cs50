@@ -10,7 +10,7 @@ int main(int argc, string argv[]){
     if (argc == 2){ //Testa se tem o segundo argumento
         int chave = atoi(argv[1]);
         printf("%i", chave);
-        if(isdigit(chave) == 1){ //Verificar se é número
+        if(chave < 100){ //Verificar se é número
             string textoOriginal = get_string("plaintext: ");
 
             printf("ciphertext: ");
