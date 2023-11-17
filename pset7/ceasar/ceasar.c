@@ -51,7 +51,9 @@ int main(int argc, string argv[]){
 
                 string textoOriginal = get_string("Informe o texto limpo: ");
 
-                for(int i=0 ; i<strlen(chave) ; i++){
+                for(int i=0 ; i<strlen(textoOriginal) ; i++){
+                    
+
                     int posicaoAscii = (int)tolower(chave[i]) - 97;
                     printf(">> %i", posicaoAscii);
                 }
