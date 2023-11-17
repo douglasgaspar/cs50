@@ -14,9 +14,13 @@ Após a saída do texto cifrado, você deve imprimir uma nova linha. Seu program
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, string argv[]){
     if (argc == 2){
+        if(strlen(argb[1])){
+            
+        }
 
     }else{
         printf("Error");
