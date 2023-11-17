@@ -19,9 +19,9 @@ int main(int argc, string argv[]){
                 //printf(">%i ", posicaoAscii);
                 if(posicaoAscii >= 0 && posicaoAscii <= 26){
                     if(islower(textoOriginal[i])){
-                        printf("%c", tolower(chave[posicaoAscii + chave]));
+                        printf("%c", tolower(chave[posicaoAscii]));
                     }else{
-                        printf("%c", toupper(chave[posicaoAscii + chave]));
+                        printf("%c", toupper(chave[posicaoAscii]));
                     }
                 }else{
                     printf("%c", textoOriginal[i]);
