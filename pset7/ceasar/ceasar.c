@@ -52,10 +52,14 @@ int main(int argc, string argv[]){
                 string textoOriginal = get_string("Informe o texto limpo: ");
 
                 for(int i=0 ; i<strlen(textoOriginal) ; i++){
-                    
+                    for(int j=0 ; j<strlen(chave) ; j++){
+                        if(textoOriginal[i] == chave[j]){
+                            
+                        }
+                    }
 
-                    int posicaoAscii = (int)tolower(chave[i]) - 97;
-                    printf(">> %i", posicaoAscii);
+                    // int posicaoAscii = (int)tolower(chave[i]) - 97;
+                    // printf(">> %i", posicaoAscii);
                 }
 
 
