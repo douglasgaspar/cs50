@@ -51,7 +51,8 @@ int main(int argc, string argv[]){
                 string textoOriginal = get_string("Informe o texto limpo: ");
 
                 for(int i=0 ; i<strlen(chave) ; i++){
-                    int posicaoAscii = 
+                    int posicaoAscii = (int)chave[i];
+                    
                 }
 
 
