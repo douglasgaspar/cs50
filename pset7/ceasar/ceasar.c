@@ -8,8 +8,9 @@ int main(int argc, string argv[]){
     //Primeiro argumento é o nome do executável
     //Segundo argumento é o parâmetro que precisa ser passado
     if (argc == 2){ //Testa se tem o segundo argumento
-        if(isdigit(argv[1][0]) == 1){ //Verificar se é número
-            int chave = atoi(argv[1]);
+        int chave = atoi(argv[1]);
+        printf("%i", chave);
+        if(isdigit(chave) == 1){ //Verificar se é número
             string textoOriginal = get_string("plaintext: ");
 
             printf("ciphertext: ");
@@ -28,11 +29,11 @@ int main(int argc, string argv[]){
                 }
             }
         }else{
-            printf("Usage: ./caesar key");
+            printf("Usage: ./caesar key numero");
             return 1;
         }
     }else{
-        printf("Usage: ./caesar key");
+        printf("Usage: ./caesar key qtde");
         return 1;
     }
 }
