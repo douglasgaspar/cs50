@@ -19,13 +19,15 @@ Após a saída do texto cifrado, você deve imprimir uma nova linha. Seu program
 int main(int argc, string argv[]){
     if (argc == 2){
         if(strlen(argv[1]) == 26){
-            if(strchr(argv[1], '0') != NULL && strchr(argv[1], '1') != NULL && strchr(argv[1], '2') != NULL &&
-                strchr(argv[1], '3') != NULL && strchr(argv[1], '4') != NULL && strchr(argv[1], '5') != NULL &&
-                    strchr(argv[1], '6') != NULL && strchr(argv[1], '7') != NULL && strchr(argv[1], '8') != NULL &&
-                        strchr(argv[1], '9') != NULL){
+            if(strchr(argv[1], '0') == NULL && strchr(argv[1], '1') == NULL && strchr(argv[1], '2') == NULL &&
+                strchr(argv[1], '3') == NULL && strchr(argv[1], '4') == NULL && strchr(argv[1], '5') == NULL &&
+                    strchr(argv[1], '6') == NULL && strchr(argv[1], '7') == NULL && strchr(argv[1], '8') == NULL &&
+                        strchr(argv[1], '9') == NULL){
+
                 string chave = argv[1];
                 for(int i=0 ; i<strlen(argv[1]); i++){
-                    if(strchr(argv[1], chave[i])){
+                    printf(">>> %c\n", chave[i]);
+                    if(strchr(argv[1], chave[i]) != NULL){
                         printf("Caractere duplicado na chave");
                         break;
                         return 1;
