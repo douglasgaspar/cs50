@@ -17,8 +17,11 @@ Após a saída do texto cifrado, você deve imprimir uma nova linha. Seu program
 #include <string.h>
 
 int main(int argc, string argv[]){
-    if (argc == 2){ //Testa se tem argumento
-        if(strlen(argv[1]) == 26){
+    //Primeiro argumento é o nome do executável
+    //Segundo argumento é o parâmetro que precisa ser passado
+    if (argc == 2){ //Testa se tem o segundo argumento
+        if(strlen(argv[1]) == 26){ //Verificar se tem 26 caracteres
+            //Testa se algum caracetere é número
             if(strchr(argv[1], '0') == NULL && strchr(argv[1], '1') == NULL && strchr(argv[1], '2') == NULL &&
                 strchr(argv[1], '3') == NULL && strchr(argv[1], '4') == NULL && strchr(argv[1], '5') == NULL &&
                     strchr(argv[1], '6') == NULL && strchr(argv[1], '7') == NULL && strchr(argv[1], '8') == NULL &&
