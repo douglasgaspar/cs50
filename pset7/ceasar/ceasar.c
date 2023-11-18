@@ -17,11 +17,11 @@ int main(int argc, string argv[]){
             int chave = atoi(argv[1]);
 
             printf("ciphertext: ");
-            printf(">%i>", (int)strlen(textoOriginal));
 
-            for(int i=0 ; i<strlen(textoOriginal) ; i++){
+            for(int i=0 ; i<(int)strlen(textoOriginal) ; i++){
                 if(islower(textoOriginal[i])){
                     printf("%c", tolower(textoOriginal[i + chave]));
+                    printf("1");
                 }else{
                     printf("%c", toupper(textoOriginal[i + chave]));
                 }
