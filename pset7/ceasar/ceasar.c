@@ -15,15 +15,18 @@ int main(int argc, string argv[]){
         if(isdigit(char1) != 0){ //Verificar se é número
             string textoOriginal = get_string("plaintext: ");
             int chave = atoi(argv[1]);
+            //printf("CHAVE: %i", chave);
 
             printf("ciphertext: ");
 
             for(int i=0 ; i<(int)strlen(textoOriginal) ; i++){
+                if((i+chave) > 26){
+                    chave = 1;
+                }
                 if(islower(textoOriginal[i])){
-                    printf("%c", tolower(textoOriginal[i + chave]));
-                    printf("1");
+                    printf("%c", tolower(textoOriginal[i] + chave));
                 }else{
-                    printf("%c", toupper(textoOriginal[i + chave]));
+                    printf("%c", toupper(textoOriginal[i] + chave));
                 }
 
                 printf("\n");
