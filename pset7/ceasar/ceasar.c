@@ -19,9 +19,9 @@ int main(int argc, string argv[]){
             printf("ciphertext: ");
 
             for(int i=0 ; i<strlen(textoOriginal) ; i++){
-                int posicaoAscii = (int)tolower(textoOriginal[i]) - 97;
-                //printf(">%i ", posicaoAscii);
-                if(posicaoAscii >= 0 && posicaoAscii <= 26){
+                int posicaoAscii = (int)tolower(textoOriginal[i]) - 96;
+                printf(">%i ", posicaoAscii);
+                if(posicaoAscii >= 1 && posicaoAscii <= 27){
                     if(islower(textoOriginal[i])){
                         printf("%c", tolower(textoOriginal[posicaoAscii + chave]));
                     }else{
