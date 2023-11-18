@@ -20,8 +20,10 @@ int main(int argc, string argv[]){
             printf("ciphertext: ");
 
             for(int i=0 ; i<(int)strlen(textoOriginal) ; i++){
-                if( ((int)textoOriginal[i]) + chave) > 26){
-                    chave = 1;
+                printf(">>> %i", (int)textoOriginal[i] + chave);
+                
+                if( ((int)textoOriginal[i] + chave) > 26){
+                    chave = 1 + chave;
                 }
                 if(islower(textoOriginal[i])){
                     printf("%c", tolower(textoOriginal[i] + chave));
