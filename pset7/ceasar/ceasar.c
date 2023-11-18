@@ -28,9 +28,8 @@ int main(int argc, string argv[]){
                 }else{
                     printf("%c", toupper(textoOriginal[i] + chave));
                 }
-
-                printf("\n");
             }
+            printf("\n");
         }else{
             printf("Usage: ./caesar key numero");
             return 1;
