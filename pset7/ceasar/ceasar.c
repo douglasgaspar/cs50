@@ -23,20 +23,25 @@ int main(int argc, string argv[]){
             for(int i=0 ; i<(int)strlen(textoOriginal) ; i++){
                 //printf(">>> %i", (int)textoOriginal[i] + chave);
                 chave = chaveCopia;
-                if(islower(textoOriginal[i])){
-                    if(((int)textoOriginal[i] + chave) > 122){
-                        chave = ((int)textoOriginal[i] + chave) - 122;
-                        printf("%c", tolower(textoOriginal[chave]));
+                
+                if((int)tolower(textoOriginal[i]) - 97 >= 0 && (int)tolower(textoOriginal[i]) - 97 <= 26){
+                    if(islower(textoOriginal[i])){
+                        if(((int)textoOriginal[i] + chave) > 122){
+                            chave = ((int)textoOriginal[i] + chave) - 122;
+                            printf("%c", tolower(textoOriginal[chave]));
+                        }else{
+                            printf("%c", tolower(textoOriginal[i] + chave));
+                        }
                     }else{
-                        printf("%c", tolower(textoOriginal[i] + chave));
+                        if(((int)textoOriginal[i] + chave) > 90){
+                            chave = ((int)textoOriginal[i] + chave) - 90;
+                            printf("%c", toupper(textoOriginal[chave]));
+                        }else{
+                            printf("%c", toupper(textoOriginal[i] + chave));
+                        }
                     }
                 }else{
-                    if(((int)textoOriginal[i] + chave) > 90){
-                        chave = ((int)textoOriginal[i] + chave) - 90;
-                        printf("%c", toupper(textoOriginal[chave]));
-                    }else{
-                        printf("%c", toupper(textoOriginal[i] + chave));
-                    }
+                    printf("%c", textoOriginal[i]);
                 }
             }
             printf("\n");
