@@ -17,6 +17,7 @@ int main(int argc, string argv[]){
             int chave = atoi(argv[1]);
 
             printf("ciphertext: ");
+            printf(">%i>", (int)strlen(textoOriginal));
 
             for(int i=0 ; i<strlen(textoOriginal) ; i++){
                 if(islower(textoOriginal[i])){
