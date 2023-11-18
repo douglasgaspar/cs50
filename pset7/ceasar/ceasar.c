@@ -19,17 +19,12 @@ int main(int argc, string argv[]){
             printf("ciphertext: ");
 
             for(int i=0 ; i<strlen(textoOriginal) ; i++){
-                int posicaoAscii = (int)tolower(textoOriginal[i]) - 96;
-                printf(">%i ", posicaoAscii);
-                if(posicaoAscii >= 1 && posicaoAscii <= 27){
-                    if(islower(textoOriginal[i])){
-                        printf("%c", tolower(textoOriginal[posicaoAscii + chave]));
-                    }else{
-                        printf("%c", toupper(textoOriginal[posicaoAscii + chave]));
-                    }
+                if(islower(textoOriginal[i])){
+                    printf("%c", tolower(textoOriginal[i + chave]));
                 }else{
-                    printf("%c", textoOriginal[i]);
+                    printf("%c", toupper(textoOriginal[i + chave]));
                 }
+
                 printf("\n");
             }
         }else{
