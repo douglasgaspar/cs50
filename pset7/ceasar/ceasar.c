@@ -26,8 +26,9 @@ int main(int argc, string argv[]){
                 if(isalpha(textoOriginal[i]) != 0){
                     if(islower(textoOriginal[i])){
                         if(((int)textoOriginal[i] + chave) > 122){
-                            chave = ((int)textoOriginal[i] + chave) - 122
-                            printf("%c", tolower(textoOriginal[chave]));
+                            chave = ((int)textoOriginal[i] + chave) - 122;
+                            printf(" chave: %i ", chave);
+                            printf("%c", chave);
                         }else{
                             printf("%c", tolower(textoOriginal[i] + chave));
                         }
