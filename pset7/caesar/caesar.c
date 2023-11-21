@@ -45,11 +45,11 @@ int main(int argc, string argv[]){
             }
             printf("\n");
         }else{
-            printf("Usage: ./caesar key numero");
+            printf("Usage: ./caesar key");
             return 1;
         }
     }else{
-        printf("Usage: ./caesar key qtde");
+        printf("Usage: ./caesar key");
         return 1;
     }
 }
