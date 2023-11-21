@@ -17,7 +17,13 @@ int main(void){
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
-    printf("\n\nS1: %i", score1);
+    if(score1 > score2){
+        printf("Player 1 wins!\n");
+    }else if(score2 > score1){
+        printf("Player 1 wins!\n");
+    }else{
+        printf("Tie!\n");
+    }
 }
 
 int compute_score(string word){
@@ -25,8 +31,10 @@ int compute_score(string word){
 
     for(int i=0 ; i<strlen(word) ; i++){
         int posicaoAscii = (int)tolower(word[i]) - 97;
-        printf(" %i ", POINTS[posicaoAscii]);
-        sum += POINTS[posicaoAscii];
+        if(posicaoAscii >= 0 && posicaoAscii <= 26){
+            //printf(" %i ", POINTS[posicaoAscii]);
+            sum += POINTS[posicaoAscii];
+        }
     }
     return sum;
 }
