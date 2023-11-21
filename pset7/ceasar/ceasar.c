@@ -27,14 +27,14 @@ int main(int argc, string argv[]){
                 if(isalpha(textoOriginal[i]) != 0){
                     if(islower(textoOriginal[i])){
                         if(((int)textoOriginal[i] + chave) > 122){
-                            chave = ((int)textoOriginal[i]) - 122 + chave;
+                            chave = 97 + chave;
                             printf("%c", tolower(textoOriginal[chave]));
                         }else{
                             printf("%c", tolower(textoOriginal[i] + chave));
                         }
                     }else{
                         if(((int)textoOriginal[i] + chave) > 90){
-                            chave = ((int)textoOriginal[i]) - 90 + chave;
+                            chave = 65 + chave;
                             printf("%c", toupper(textoOriginal[chave]));
                         }else{
                             printf("%c", toupper(textoOriginal[i] + chave));
