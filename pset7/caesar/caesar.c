@@ -33,6 +33,7 @@ int main(int argc, string argv[]){
                 }
             }
         }
+        printf("\n");
 
     }else{
         printf("Usage: ./caesar key\n");
