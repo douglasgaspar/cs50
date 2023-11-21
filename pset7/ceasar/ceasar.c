@@ -9,7 +9,6 @@ int main(int argc, string argv[]){
     //Segundo argumento é o parâmetro que precisa ser passado
     if (argc == 2){ //Testa se tem o segundo argumento
         char char1 = argv[1][0];
-        printf("%c\n", char1);
 
         //printf("%i\n", isdigit(char1));
         if(isdigit(char1) != 0){ //Verificar se é número
@@ -21,15 +20,17 @@ int main(int argc, string argv[]){
             printf("ciphertext: ");
 
             for(int i=0 ; i<(int)strlen(textoOriginal) ; i++){
-                //printf(">>> %i", (int)textoOriginal[i] + chave);
+                printf(">>> %i", (int)textoOriginal[i] + chave);
                 chave = chaveCopia;
 
                 if(isalpha(textoOriginal[i]) != 0){
                     if(islower(textoOriginal[i])){
                         if(((int)textoOriginal[i] + chave) > 122){
+                            printf("entrou");
                             chave = 97 + chave;
                             printf("%c", tolower(textoOriginal[chave]));
                         }else{
+                            printf("entrou else ");
                             printf("%c", tolower(textoOriginal[i] + chave));
                         }
                     }else{
