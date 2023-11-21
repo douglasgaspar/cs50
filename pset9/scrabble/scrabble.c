@@ -32,7 +32,7 @@ int compute_score(string word){
     for(int i=0 ; i<strlen(word) ; i++){
         int posicaoAscii = (int)tolower(word[i]) - 97;
         if(posicaoAscii >= 0 && posicaoAscii <= 26){
-            //printf(" %i ", POINTS[posicaoAscii]);
+            printf(" %i ", POINTS[posicaoAscii]);
             sum += POINTS[posicaoAscii];
         }
     }
