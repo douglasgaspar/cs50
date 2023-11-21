@@ -25,22 +25,29 @@ int main(int argc, string argv[]){
 
                 if(isalpha(textoOriginal[i]) != 0){
                     if(islower(textoOriginal[i])){
-                        if(((int)textoOriginal[i] + chave) > 122){
-                            chave = ((int)textoOriginal[i] + chave) - 122;
-                            printf("%c", 96 + chave);
-                        }else{
-                            printf("%c", tolower(textoOriginal[i] + chave));
-                        }
+                        printf("%c", (textoOriginal[i] - 97 + chave) % 26 + 97);
+                    }else if(isupper(textoOriginal[i])){
+                        printf("%c", (textoOriginal[i] - 65 + chave) % 26 + 65);
                     }else{
-                        if(((int)textoOriginal[i] + chave) > 90){
-                            chave = ((int)textoOriginal[i] + chave) - 90;
-                            printf("%c", 64 + chave);
-                        }else{
-                            printf("%c", toupper(textoOriginal[i] + chave));
-                        }
+                        printf("%c", textoOriginal[i]);
                     }
-                }else{
-                    printf("%c", textoOriginal[i]);
+
+                    //     if(((int)textoOriginal[i] + chave) > 122){
+                    //         chave = ((int)textoOriginal[i] + chave) - 122;
+                    //         printf("%c", 96 + chave);
+                    //     }else{
+                    //         printf("%c", tolower(textoOriginal[i] + chave));
+                    //     }
+                    // }else{
+                    //     if(((int)textoOriginal[i] + chave) > 90){
+                    //         chave = ((int)textoOriginal[i] + chave) - 90;
+                    //         printf("%c", 64 + chave);
+                    //     }else{
+                    //         printf("%c", toupper(textoOriginal[i] + chave));
+                    //     }
+                    // }
+                //}else{
+                //    printf("%c", textoOriginal[i]);
                 }
             }
             printf("\n");
