@@ -20,22 +20,21 @@ int main(int argc, string argv[]){
             printf("ciphertext: ");
 
             for(int i=0 ; i<(int)strlen(textoOriginal) ; i++){
-                printf(">>> %i", (int)textoOriginal[i] + chave);
+                //printf(">>> %i", (int)textoOriginal[i] + chave);
                 chave = chaveCopia;
 
                 if(isalpha(textoOriginal[i]) != 0){
                     if(islower(textoOriginal[i])){
                         if(((int)textoOriginal[i] + chave) > 122){
                             chave = ((int)textoOriginal[i] + chave) - 122;
-                            printf(" chave: %i ", chave);
-                            printf("%c", chave);
+                            printf("%c", 96 + chave);
                         }else{
                             printf("%c", tolower(textoOriginal[i] + chave));
                         }
                     }else{
                         if(((int)textoOriginal[i] + chave) > 90){
-                            chave = 65 + chave;
-                            printf("%c", toupper(textoOriginal[chave]));
+                            chave = ((int)textoOriginal[i] + chave) - 90;
+                            printf("%c", 64 + chave);
                         }else{
                             printf("%c", toupper(textoOriginal[i] + chave));
                         }
