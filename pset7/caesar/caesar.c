@@ -28,9 +28,9 @@ int main(int argc, string argv[]){
                     printf("%c", (textoOriginal[i] - 97 + chave) % 26 + 97);
                 }else if(isupper(textoOriginal[i])){
                     printf("%c", (textoOriginal[i] - 65 + chave) % 26 + 65);
-                }else{
-                    printf("%c", textoOriginal[i]);
                 }
+            }else{
+                printf("%c", textoOriginal[i]);
             }
         }
         printf("\n");
